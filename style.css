@@ -3,11 +3,11 @@
   margin: 0;
   padding: 0;
 }
-
 .main-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
+  border: 2px solid red;
 }
 .left-container{
   background-image: url(./assets/left-main.jpg);
@@ -18,7 +18,7 @@
 .right-container {
   display: flex;
   flex-direction: column;
-  margin: 2.4rem 3rem 0 3rem;
+  margin: 2.4rem 4rem 0 3rem;
 }
 nav{
   display: flex;
@@ -43,7 +43,7 @@ nav{
   margin-left: 1rem;
   align-items: flex-end;
 }
-.outlined-text {
+.creat-text {
   font-size: 10rem;
   line-height: 0.9;
   font-family: "Merriweather", serif;
@@ -51,7 +51,7 @@ nav{
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
 }
-.color-black {
+.tivity-text {
   margin-left: 10rem;
   font-size: 10rem;
   line-height: 0.9;
@@ -59,7 +59,7 @@ nav{
   font-weight: 600;
   color: #333333;
 }
-.secondary-text {
+.ingredient-text {
   font-size: 1.5rem;
   font-family: "Merriweather", serif;
   color: #333333be;
@@ -91,6 +91,7 @@ nav{
   left: 41.5rem;
   top: 1rem;
 }
+/* Last Section */
 .list {
   display: flex;
   flex-direction: column;
@@ -115,7 +116,6 @@ nav{
   position: absolute;
   left: 4px;
 }
-
 .list-item.active {
   color: #000;
 }
@@ -143,4 +143,160 @@ nav{
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media screen and (max-width:1051px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+  }
+  .nav-items{
+    gap: 3rem;
+  }
+  .nav-items::before {
+    content: "";
+    display: none;
+  }
+  .left-container{
+    display: none;
+  }
+  .ingredient-text {
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    color: #333333be;
+    margin-top: 1rem;
+    margin-bottom: 12px;
+    margin-left: 60%;
+  }
+  .btn {
+    padding: 1rem 2.3rem;
+    font-size: 0.8rem;
+    position: static;
+    margin-left: 9rem;
+    margin-top: 1rem;
+    /* background: #333; */
+    /* color: #fff; */
+    border: none;
+    /* font-family: "Merriweather", serif; */
+    /* font-weight: 700; */
+    /* left: 41.5rem; */
+    /* top: 1rem; */
+  }
+  .social-media{
+    flex-direction: row;
+    /* margin-left: 1rem; */
+    margin-left: 7rem;
+    margin-top: 1rem;
+  }
+  .social-media{
+  }
+}
+@media screen and (max-width:910px) {
+  .arrow{
+    display: none;
+  }
+}
+@media screen and (max-width:861px) {
+  .image-container{
+    margin-left: 9rem;
+    margin-bottom: 3rem;
+  }
+  .bottom{
+    flex-direction: column-reverse;
+  }
+  .list {
+    gap: 1rem;
+    font-size: 1rem;
+    color: #5d5d5d;
+    margin-left: 9rem;
+    margin-bottom: 4rem;
+  }
+  .image-container {
+    width: 100%;
+  }
+  .img{
+    width: 80%;
+  }
+}
+@media screen and (max-width:691px) {
+  .creat-text{
+    margin-top: 1rem;
+    font-size: 7rem;
+  }
+  .tivity-text{
+    margin-left: 10rem;
+    font-size: 7rem;
+  }
+  .ingredient-text{
+    margin-left: 55%;
+  }
+}
+@media screen and (max-width:591px) {
+  nav{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-items{
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .creat-text{
+    font-size: 5rem;
+  }
+  .tivity-text{
+    margin-left: 10rem;
+    font-size: 5rem;
+  }
+  .ingredient-text{
+    margin-left: 45%;
+  }
+  .creat-text{
+    font-size: 3rem;
+  }
+  .tivity-text{
+    margin-left: 6rem;
+    font-size: 3rem;
+  }
+  .ingredient-text{
+    margin-top: 0;
+    margin-left: 25%;
+  }
+  .social-media{
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+  .social{
+    width: 20px;
+  }
+  .btn {
+    padding: 1rem 1.3rem;
+    margin-left: 4rem;
+  }
+  .image-container{
+    margin-left: 0.5rem;
+  }
+  .bottom{
+    flex-direction: column-reverse;
+  }
+  .list {
+    margin-left: 0.5rem;
+  }
+  .img{
+    width: 100%;
+  }
+
+}
+@media screen and (max-width:400px){
+  .nav-items{
+    gap: 1.2rem;
+  }
+}
+@media screen and (max-width:377px) {
+  .nav-items{
+    flex-direction: column;
+  }
 }
